@@ -1,72 +1,51 @@
-from pathlib import Path
-import re
+import os
+import glob
 
-ROOT = Path(__file__).parent.parent
+SQUIDS_DIR = "squids"
+README_PATH = "README.md"
 
-README = ROOT / "README.md"
-SQUIDS = ROOT / "squids"
+def get_specimens():
+    specimens = []
+    if not os.path.exists(SQUIDS_DIR):
+        return specimens
 
-START = "<!-- SQUID_CATALOGUE_START -->"
-END = "<!-- SQUID_CATALOGUE_END -->"
+    # Iterate through folders inside /squids
+    for item in sorted(os.listdir(SQUIDS_DIR)):
+        item_path = os.path.join(SQUIDS_DIR, item)
+        if os.path.isdir(item_path):
+            # Check for inner contents (like zip files or sub-files)
+            zip_files = glob.glob(os.path.join(item_path, "*.zip"))
+            specimens.append({
+                "name": item,
+                "has_zip": len(zip_files) > 0,
+                "path": f"{SQUIDS_DIR}/{item}"
+            })
+    return specimens
 
-cards = []
+def generate_markdown(specimens):
+    content = ["# Squid Exchange\n", "Welcome to the Squid Exchange repository.\n"]
+    content.append("## Specimens\n")
 
-for folder in sorted(SQUIDS.iterdir()):
+    if not specimens:
+        content.append("_No specimens currently available in the catalogue._\n")
+    else:
+        content.append("| Specimen | Path | Archive Included |")
+        content.append("| :--- | :--- | :---: |")
+        for spec in specimens:
+            has_zip_str = "Yes" if spec["has_zip"] else "No"
+            content.append(f"| **{spec['name']}** | [`{spec['path']}`]({spec['path']}) | {has_zip_str} |")
+        content.append("")
 
-    if not folder.is_dir():
-        continue
+    return "\n".join(content)
 
-    readme = folder / "README.md"
+def main():
+    specimens = get_specimens()
+    readme_content = generate_markdown(specimens)
 
-    zip_file = next(folder.glob("*.zip"), None)
+    with open(README_PATH, "w", encoding="utf-8") as f:
+        f.write(readme_content)
 
-    if zip_file is None:
-        continue
+    print(f"Successfully updated {README_PATH} with {len(specimens)} specimen(s).")
 
-    description = ""
-
-    if readme.exists():
-        lines = readme.read_text(encoding="utf8").splitlines()
-
-        for line in lines:
-            line = line.strip()
-
-            if line.startswith("#"):
-                continue
-
-            if line:
-                description = line
-                break
-
-    if not description:
-        description = "No description."
-
-    card = f"""### 🦑 {folder.name}
-
-{description}
-
-**Download:** [{zip_file.name}]({zip_file.relative_to(ROOT).as_posix()})
-
----
-"""
-
-    cards.append(card)
-
-catalogue = "\n".join(cards)
-
-text = README.read_text(encoding="utf8")
-
-pattern = re.compile(
-    rf"{re.escape(START)}.*?{re.escape(END)}",
-    flags=re.S,
-)
-
-replacement = f"""{START}
-
-{catalogue}
-
-{END}"""
-
-text = pattern.sub(replacement, text)
-
-README.write_text(text, encoding="utf8")
+if __name__ == "__main__":
+    main()
