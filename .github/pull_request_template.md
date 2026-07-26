@@ -1,6 +1,6 @@
 # 🦑 New Squid Submission
 
-Thank you for contributing a squid to the Squid Exchange!
+Thank you for contributing to the Squid Exchange!
 
 ## Squid
 
@@ -12,11 +12,11 @@ Thank you for contributing a squid to the Squid Exchange!
 
 ## About this squid
 
-Tell us a little about them.
+Tell us about their life.
 
 How were they raised?
 
-What makes them interesting?
+What makes them unique?
 
 ---
 
@@ -24,24 +24,24 @@ What makes them interesting?
 
 Examples:
 
+- Developed a fear of shrinking environments.
 - Loves exploring.
-- Extremely food motivated.
-- Frequently investigates unfamiliar objects.
-- Learns quickly.
-- Surprisingly lazy.
+- Learns very quickly.
+- Developed unusual food preferences.
+- Frequently investigates unknown objects.
 
 ---
 
 ## Files included
 
-- [ ] Squid ZIP
-- [ ] README
+- [ ] Exported squid ZIP
+- [ ] README describing the squid
 
 ---
 
 ## Checklist
 
-- [ ] The squid loads correctly in Dosidicus.
+- [ ] The ZIP loads correctly in Dosidicus.
 - [ ] This squid was raised by me or I have permission to share it.
 - [ ] I understand this squid will become part of the public Squid Exchange.
 
