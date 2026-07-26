@@ -1,8 +1,8 @@
-# Squid Exchange
+# 🦑 Squid Exchange
 
 Welcome to the public ocean.
 
-Every ZIP in this repository contains a real squid raised by a member of the Dosidicus community.
+Every specimen in this repository is a complete exported [Dosidicus](https://github.com/ViciousSquid/Dosidicus) mind.
 
 Each squid has its own:
 
@@ -11,10 +11,13 @@ Each squid has its own:
 - personality
 - cognitive history
 
-You can download any squid and continue raising it yourself.
+Adopt them.
 
-No two squids are the same.
+Continue their stories.
 
-## How it works
+---
 
-**Raise squid > Export squid > Open a Pull Request > Your squid joins the ocean**
+# Specimens
+
+<!-- SQUIDS_START -->
+<!-- SQUIDS_END -->
