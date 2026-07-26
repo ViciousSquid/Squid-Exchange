@@ -1,23 +1,10 @@
-# 🦑 Squid Exchange
+# Squid Exchange
 
-Welcome to the public ocean.
+Welcome to the Squid Exchange repository.
 
-Every specimen in this repository is a complete exported [Dosidicus](https://github.com/ViciousSquid/Dosidicus) mind.
+## Specimens
 
-Each squid has its own:
-
-- neural network
-- memories
-- personality
-- cognitive history
-
-Adopt them.
-
-Continue their stories.
-
----
-
-# Specimens
-
-<!-- SQUIDS_START -->
-<!-- SQUIDS_END -->
+| Specimen | Path | Archive Included |
+| :--- | :--- | :---: |
+| **Gaspard** | [`squids/Gaspard`](squids/Gaspard) | Yes |
+| **Miroslav** | [`squids/Miroslav`](squids/Miroslav) | Yes |
