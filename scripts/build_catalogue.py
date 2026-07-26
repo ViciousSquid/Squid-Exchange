@@ -9,11 +9,9 @@ def get_specimens():
     if not os.path.exists(SQUIDS_DIR):
         return specimens
 
-    # Iterate through folders inside /squids
     for item in sorted(os.listdir(SQUIDS_DIR)):
         item_path = os.path.join(SQUIDS_DIR, item)
         if os.path.isdir(item_path):
-            # Check for inner contents (like zip files or sub-files)
             zip_files = glob.glob(os.path.join(item_path, "*.zip"))
             specimens.append({
                 "name": item,
@@ -23,20 +21,27 @@ def get_specimens():
     return specimens
 
 def generate_markdown(specimens):
-    content = ["# Squid Exchange\n", "Welcome to the Squid Exchange repository.\n"]
-    content.append("## Specimens\n")
+    lines = [
+        "# 🦑 Squid Exchange\n",
+        "Welcome to the public ocean.\n",
+        "Every specimen in this repository is a complete exported [Dosidicus](https://github.com/ViciousSquid/Dosidicus) mind.\n",
+        "Browse them.\n",
+        "Adopt them.\n",
+        "Continue their stories.\n",
+        "## Specimens\n"
+    ]
 
     if not specimens:
-        content.append("_No specimens currently available in the catalogue._\n")
+        lines.append("_No specimens currently available in the catalogue._\n")
     else:
-        content.append("| Specimen | Path | Archive Included |")
-        content.append("| :--- | :--- | :---: |")
+        lines.append("| Specimen | Path | Archive |")
+        lines.append("| :--- | :--- | :---: |")
         for spec in specimens:
             has_zip_str = "Yes" if spec["has_zip"] else "No"
-            content.append(f"| **{spec['name']}** | [`{spec['path']}`]({spec['path']}) | {has_zip_str} |")
-        content.append("")
+            lines.append(f"| **{spec['name']}** | [`{spec['path']}`]({spec['path']}) | {has_zip_str} |")
+        lines.append("")
 
-    return "\n".join(content)
+    return "\n".join(lines)
 
 def main():
     specimens = get_specimens()
