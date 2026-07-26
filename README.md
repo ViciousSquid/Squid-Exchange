@@ -14,3 +14,7 @@ Each squid has its own:
 You can download any squid and continue raising it yourself.
 
 No two squids are the same.
+
+## How it works
+
+**Raise squid > Export squid > Open a Pull Request > Your squid joins the ocean**
