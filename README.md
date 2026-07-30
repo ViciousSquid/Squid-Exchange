@@ -17,6 +17,6 @@ Continue their stories.
 | Specimen | Description | Archive |
 | :--- | :--- | :---: |
 | **[Gaspard](squids/Gaspard)** | One of the first public Dosidicus specimens. | ✅ |
-| **[Miroslav](squids/Miroslav)** | One of the first public Dosidicus specimens. | ✅ |
+| **[Miroslav](squids/Miroslav)** | Highly responsive, quick to learn (high plasticity) | ✅ |
 
 <!-- END CATALOGUE -->
