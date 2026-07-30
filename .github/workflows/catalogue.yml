@@ -12,28 +12,34 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: update-squid-catalogue
+  cancel-in-progress: true
+
 jobs:
   catalogue:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
+    timeout-minutes: 5
 
     steps:
-
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Setup Python
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
       - name: Generate catalogue
-        run: |
-          python scripts/build_catalogue.py
+        run: python scripts/build_catalogue.py
 
-      - name: Commit README
+      - name: Commit updated README
         run: |
-          if git diff --quiet; then
-            echo "Nothing changed."
+          if git diff --quiet README.md; then
+            echo "README is already up to date."
             exit 0
           fi
 
@@ -41,5 +47,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add README.md
-          git commit -m "Update squid catalogue"
+          git commit -m "docs: update squid catalogue"
           git push
