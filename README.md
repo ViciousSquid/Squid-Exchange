@@ -1,6 +1,6 @@
 # 🦑  Squid Exchange
 
-### The public archive of digital squid minds.
+### The public archive of digital minds.
 
 
 
