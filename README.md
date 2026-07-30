@@ -27,6 +27,12 @@ See the [Contribution Guide](https://github.com/ViciousSquid/Squid-Exchange/blob
 ## Specimens
 
 <!-- BEGIN CATALOGUE -->
+
+| Specimen | Description | Archive |
+| :--- | :--- | :---: |
+| **[Gaspard](squids/Gaspard)** | One of the first public Dosidicus specimens. | ✅ |
+| **[Miroslav](squids/Miroslav)** | Highly responsive, quick to learn (high plasticity) | ✅ |
+
 <!-- END CATALOGUE -->
 
 > #### Every squid remembers where it came from. Its future is now in someone else's hands.
