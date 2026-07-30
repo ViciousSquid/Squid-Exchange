@@ -8,7 +8,7 @@ Every specimen in this repository is a complete exported [Dosidicus](https://git
 
 Some are curious. Some are anxious. Some are explorers. Others have stories still waiting to unfold.
 
-Browse the archive, adopt a squid, and continue its journey.<br><br><br>
+Browse the archive, adopt a squid, and continue its journey.<br><br>
 
 ## What is Squid Exchange?
 
@@ -19,6 +19,10 @@ Each archive contains an entire digital organism, including its neural network, 
 Rather than starting every squid from birth, you can adopt one that has already lived a life.
 
 Every adoption creates a new chapter in that squid's story.
+
+#### Export your specimen from Dosidicus and submit it to the archive so others can adopt it and continue its journey.
+
+See the [Contribution Guide](https://github.com/ViciousSquid/Squid-Exchange/blob/main/CONTRIBUTING.md) for details.<br><br>
 
 ## Specimens
 
