@@ -13,4 +13,10 @@ Continue their stories.
 ## Specimens
 
 <!-- BEGIN CATALOGUE -->
+
+| Specimen | Description | Archive |
+| :--- | :--- | :---: |
+| **[Gaspard](squids/Gaspard)** | One of the first public Dosidicus specimens. | ✅ |
+| **[Miroslav](squids/Miroslav)** | One of the first public Dosidicus specimens. | ✅ |
+
 <!-- END CATALOGUE -->
