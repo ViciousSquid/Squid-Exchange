@@ -1,6 +1,6 @@
 # Miroslav
 
-Raised by @ViciousSquid
+Raised by [ViciousSquid](https://github.com/ViciousSquid)
 
 - Young squid with default brain type (8 core neurons)
 - stress neurons have developed in response to being extremely hungry in the past
