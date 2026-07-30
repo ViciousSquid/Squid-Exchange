@@ -12,7 +12,6 @@ Browse them. Adopt them. Continue their stories.
 
 ## Specimens
 
-| Specimen | Path | Archive |
-| :--- | :--- | :---: |
-| **Gaspard** | [`squids/Gaspard`](squids/Gaspard) | Yes |
-| **Miroslav** | [`squids/Miroslav`](squids/Miroslav) | Yes |
+<!-- BEGIN CATALOGUE -->
+Catalogue is being generated...
+<!-- END CATALOGUE -->
